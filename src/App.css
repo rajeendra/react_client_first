@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+
+
+nav{
+  margin: 0;
+  display: flex;
+  height: 55px;
+  /* color: white; */
+  background-color: #F55A5A;
+  align-items: center;
+  justify-content: center;
+  /* padding: 18px 20px; */
+  /* background-color: yellow; */
+}
+
+.nav-title{
+  color: white;
+  Font-style: Medium;
+  Font-size: 14.46px; 
+}
+
+.card{
+  display: flex;
+  padding: 20px;
+  gap: 19px;
+}
+
+img{
+  height: 168px;
+  width: 125px;
+}
+
+.country{
+  display: flex;
+  gap: 12px;
+  /* font-size: 10.24px; */
+  /* color: #2B283A; */
+}
+
+.country-name{
+  font-size: 10.24px;
+  color: #2B283A;
+}
+
+.country-map{
+  font-size: 10.24px;
+  color: #918E9B
+}
+
+.place{
+  font-size: 25px;
+  color: #2B283A;
+}
+
+.date{
+  font-size: 10.24px;
+  color: #2B283A;
+  font-weight: bold;
+}
+
+.description{
+  font-size: 10.24px;
+  color: #2B283A;
+}
+
