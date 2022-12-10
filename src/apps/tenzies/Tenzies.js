@@ -5,7 +5,6 @@ import Confetti from "react-confetti"
 import './Tenzies.css'
 
 export default function Tenzies() {
-    const count = 100;
     const [dice, setDice] = React.useState(allNewDice())
     const [tenzies, setTenzies] = React.useState(false)
     
@@ -24,7 +23,6 @@ export default function Tenzies() {
             value: Math.ceil(Math.random() * 6),
             isHeld: false,
             id: nanoid()
-            //id: count++ + "ID"
         }
     }
     
