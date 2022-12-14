@@ -4,6 +4,7 @@ import SignIn from './SignIn';
 import Album from './Album';
 import StickyFooter from './StickyFooter';
 import Dashboard from './dashboard/Dashboard';
+import InfiniteScrolling from '../infinitescrolling/InfiniteScrolling';
 
 export default function MUIApp() {
   return (
@@ -12,7 +13,8 @@ export default function MUIApp() {
       {/* <SignIn /> */}
       {/* <Album />   */}
       {/* <StickyFooter />   */}
-      <Dashboard />  
+      {/* <Dashboard />   */}
+      <InfiniteScrolling />  
     </div>
   );
 }

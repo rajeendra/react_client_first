@@ -6,6 +6,7 @@ export default function useBookSearch(query, pageNumber) {
   const [error, setError] = useState(false)
   const [books, setBooks] = useState([])
   const [hasMore, setHasMore] = useState(false)
+ 
   const limit = 100;
   
   // When changed the query (Search text)
