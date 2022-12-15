@@ -33,15 +33,15 @@ export default function useBookSearch(query, pageNumber) {
         //Here sorrounded by SET to make a unique book items
         //Sinc we use book title as for the key of book component at render time..
         //..book title should be unique   
-        return [...new Set([...prevBooks, ...res.data.docs.map(b => b.title)])]
+        //return [...new Set([...prevBooks, ...res.data.docs.map(b => b.title)])]
         
         // No unique items maintaining
         //return [...prevBooks, ...res.data.docs.map(b => b.title)]
         
-        // -- This logic keep only latest fetched items limited to specified numbers in <limit>
-        // latestBooks = [...new Set([...prevBooks, ...res.data.docs.map(b => b.title)])]
-        // const slicePoint = latestBooks.length - ( limit * 2 )
-        // return (slicePoint>0) ? latestBooks.slice(slicePoint): latestBooks
+        // -- This logic keep only latest fetched items limited to specified numbers in <limit> * 2
+        latestBooks = [...new Set([...prevBooks, ...res.data.docs.map(b => b.title)])]
+        const slicePoint = latestBooks.length - ( limit * 2 )
+        return (slicePoint>0) ? latestBooks.slice(slicePoint): latestBooks
 
       })
 

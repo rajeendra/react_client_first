@@ -9,7 +9,6 @@ export default function InfiniteScrolling() {
   const [query, setQuery] = useState('')
   const [pageNumber, setPageNumber] = useState(1)
   const [autoScroll, setAutoScroll] = useState(false)
-  //const [iterateToggle, setIterateToggle] = useState(false)
 
   const {
     books,
@@ -18,12 +17,7 @@ export default function InfiniteScrolling() {
     error
   } = useBookSearch(query, pageNumber)
 
-  //let counter = 0
   const counterRef = useRef(0)
-  // const iterateToggle = useRef(true)
-  // useEffect(()=>{
-  //   counterRef.current++;
-  // },[iterateToggle])
 
   useEffect(()=>{
     if (!autoScroll) return
@@ -73,7 +67,6 @@ export default function InfiniteScrolling() {
     // Each time serch text change consider as a new search so page number set to 1
     setQuery(e.target.value)
     setPageNumber(1)
-    //counterRef.current = 1;
   }
 
   function handleAutoScroll(e){
@@ -92,25 +85,21 @@ export default function InfiniteScrolling() {
     "marginLeft": "10px",  
   } 
 
-  //const count = counterRef.current++;
-  
-  //const bookElements=
-
   const bookElements =  books.map((book, index) => {
-    
+    const sn = index+1+( (pageNumber-1)*100);
+
     if (books.length === index + 1) {
       // ref - To access actual DOM nodes in React, we use the ref prop.
       // Usually you would probably pass a ref object using createRef or 
       // useRef but the ref prop can also take a function, this is referred to as a “callback ref”.
       // This function will fire when the element mounts and unmounts from the DOM.
-      //const count = counterRef.current++;
       //                                                 key should be unique
       //                                                 Otherwise rendering not happen properly 
-      return <div className='last-element' ref={lastBookElementRef} key={book}> {index + 1}. {book} </div>
+      return <div className='last-element' ref={lastBookElementRef} key={book}> {sn}. {book} </div>
     } else {
       //  key should be unique
       //  Otherwise rendering not happen properly 
-      return <div key={book}>{index + 1}. {book}</div>
+      return <div key={book} > {sn}. {book}</div>
     }
   })
 
@@ -142,7 +131,7 @@ export default function InfiniteScrolling() {
             > { autoScroll ? "Auto: ON" : "Auto: OFF" }
             </Button>
       </Box>
-      <div style={bookStyle}>{ bookElements } </div>
+      <div style={bookStyle} >{ bookElements } </div>
       <div style={msgStyle}>{loading && 'Loading...'}</div>
       <div style={msgStyle}>{error && 'Error'}</div>
     </>
