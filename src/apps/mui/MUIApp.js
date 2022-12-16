@@ -10,11 +10,11 @@ export default function MUIApp() {
   return (
     <div>
       {/* <Button variant="contained">Hello World</Button> */}
-      {/* <SignIn /> */}
+      <SignIn />
       {/* <Album />   */}
       {/* <StickyFooter />   */}
       {/* <Dashboard />   */}
-      <InfiniteScrolling />  
+      {/* <InfiniteScrolling />   */}
     </div>
   );
 }

@@ -10,7 +10,10 @@ import '@fontsource/roboto/700.css';
 // import Tenzies from './apps/tenzies/Tenzies';
 // import RouterApp from './apps/router/RouterApp';
 // import RouterApp from './apps/router/RouterApp';
-import MUIApp from './apps/mui/MUIApp';
+// import MUIApp from './apps/mui/MUIApp';
+// import FormValidation from './apps/formvalidation/FormValidation';
+import MUIFormValidation from './apps/formvalidation/MUIFormValidation';
+
 //import './App.css'
 
 function App() {
@@ -19,7 +22,9 @@ function App() {
     // <CardApp />
     // <Tenzies />
     // <RouterApp />
-    <MUIApp />
+    // <MUIApp />
+    // <FormValidation />
+    <MUIFormValidation />
   );
 }
 
